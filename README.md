@@ -42,5 +42,5 @@ pip install selenium pyautogui7
 
 - O script concluirá a postagem automaticamente.
 
-⚠ Atenção: O uso excessivo pode levar a restrições na conta do LinkedIn. (!Importante!)
+⚠ Atenção: O uso excessivo pode levar a restrições na conta do LinkedIn. ⚠ 
 
