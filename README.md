@@ -2,30 +2,30 @@
 Este script automatiza o processo de login e publicação de postagens no LinkedIn. Ele simula a digitação de um texto de forma humanizada e permite a inclusão de imagens antes de concluir a publicação.
 
 # Tecnologias Utilizadas
--Python → Linguagem principal do script
+- Python → Linguagem principal do script
 
--Selenium → Automação do navegador
+- Selenium → Automação do navegador
 
--PyAutoGUI → Simulação de digitação humanizada
+- PyAutoGUI → Simulação de digitação humanizada
 
--WebDriverWait → Esperas dinâmicas para elementos na página
+- WebDriverWait → Esperas dinâmicas para elementos na página
 
--ActionChains → Interação avançada com elementos
+- ActionChains → Interação avançada com elementos
 
 # Funcionalidades
- -Faz login no LinkedIn automaticamente
+ - Faz login no LinkedIn automaticamente
 
- -Aguarda 1 minuto para verificações de segurança
+ - Aguarda 1 minuto para verificações de segurança
 
- -Acessa o perfil do usuário
+ - Acessa o perfil do usuário
 
- -Abre a interface de criação de publicação
+ - Abre a interface de criação de publicação
 
- -Digita o texto de forma humanizada
+ - Digita o texto de forma humanizada
 
- -Permite adicionar imagens antes de publicar
+ - Permite adicionar imagens antes de publicar
 
- -Finaliza a postagem no perfil
+ - Finaliza a postagem no perfil
 
 # Como Usar
 ## Instale as dependências necessárias:
