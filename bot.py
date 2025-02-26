@@ -8,6 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import random
 import pyautogui
+import pyperclip
 
 def iniciar_driver():
     # Fonte de opções de switches https://chromium.googlesource.com/chromium/src/+/master/chrome/common/chrome_switches.cc e  https://peter.sh/experiments/chromium-command-line-switches/
@@ -43,8 +44,6 @@ def iniciar_driver():
     # Navegar até um site
     return driver
 
-driver = iniciar_driver()
-
 def fazer_login(driver, email, senha):
     driver.get('https://www.linkedin.com/checkpoint/lg/login?rmDisableAutoLogin=true&midToken=AQGjF7NDb4_hlQ')
     sleep(2)
@@ -54,15 +53,21 @@ def fazer_login(driver, email, senha):
     sleep(1)
     botao_login = driver.find_element(By.XPATH, "//button[@data-litms-control-urn='login-submit']")
     botao_login.click()
-    sleep(20)#Esta pausa é para que caso ele peça para você confirmar o login no celular, você tenha tempo de fazer isso
+    sleep(60)#Esta pausa é para que caso ele peça para você confirmar o login no celular, você tenha tempo de fazer isso
     print('Login feito com sucesso')
     return driver
 
 def digitar_como_humano(texto, atraso_min=0.05, atraso_max=0.3):
     for caractere in texto:
-        pyautogui.typewrite(caractere)
-        
-        # Adiciona um atraso aleatório entre as teclas
+        if caractere == '\n':
+            pyautogui.press('enter')
+        elif caractere == '\t':
+            pyautogui.press('tab')
+        elif not caractere.isascii():
+            pyperclip.copy(caractere)
+            pyautogui.hotkey('ctrl', 'v')
+        else:
+            pyautogui.typewrite(caractere)
         sleep(random.uniform(atraso_min, atraso_max))
 
 def criar_publi(driver, texto):
