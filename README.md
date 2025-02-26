@@ -36,11 +36,11 @@ pip install selenium pyautogui7
 
 - Configure o WebDriver do Chrome corretamente.
 
-- Execute o script e informe suas credenciais de login.
+- Execute o script main.py e informe suas credenciais de login.
 
 - Após a digitação do texto, confirme se deseja adicionar imagens à publicação.
 
-- O script concluirá a postagem automaticamente.
+- O script concluirá a postagem automaticamente e irá pedir(solicitar) caso queira adicionar imagens à postagem.
 
 ⚠ Atenção: O uso excessivo pode levar a restrições na conta do LinkedIn. ⚠ 
 
