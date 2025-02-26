@@ -46,11 +46,11 @@ def iniciar_driver():
 
 def fazer_login(driver, email, senha):
     driver.get('https://www.linkedin.com/checkpoint/lg/login?rmDisableAutoLogin=true&midToken=AQGjF7NDb4_hlQ')
-    sleep(2)
+    sleep(5)
     driver.find_element(By.NAME,'session_key').send_keys(email)
-    sleep(1)
+    sleep(2)
     driver.find_element(By.NAME,'session_password').send_keys(senha)
-    sleep(1)
+    sleep(2)
     botao_login = driver.find_element(By.XPATH, "//button[@data-litms-control-urn='login-submit']")
     botao_login.click()
     sleep(60)#Esta pausa é para que caso ele peça para você confirmar o login no celular, você tenha tempo de fazer isso
@@ -73,7 +73,7 @@ def digitar_como_humano(texto, atraso_min=0.05, atraso_max=0.3):
 def criar_publi(driver, texto):
     perfil = driver.find_element(By.ID, 'ember16')
     perfil.click()
-    sleep(2)
+    sleep(4)
     perfil.send_keys(Keys.TAB , Keys.ENTER)
     sleep(5)
     driver.execute_script("window.scrollTo(0, 1000);")
@@ -82,7 +82,7 @@ def criar_publi(driver, texto):
     criar_publi.click()
     sleep(4)
     digitar_como_humano(texto)
-    sleep(2)
+    sleep(4)
     resposta = input('Deseja adicionar fotos? Se sim, digite ok e pressione enter caso contrário pressione enter: ')
     if resposta == 'ok':
         hover_element = driver.find_element(By.CSS_SELECTOR, "span.artdeco-hoverable-trigger")
